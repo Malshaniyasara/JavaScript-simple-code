@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script language="javascript" type = "text/javaScript">
+		function validateForm() {
+		var x =myForm.fname.value;
+		if(x=="") {
+		alert("User name must be filled");
+		return false;
+	}
+	if (myForm.psw1.value=="" || myForm.psw1.value.length<6) {
+		alert ("password must be filled password and length must be more than six characters");
+		return false;
+	}
+	if (myForm.psw2.value=="" || myForm.psw1.value!=myFormpsw2.value) {
+		alert ("conform psw must be filled & not equal password");
+		return false;
+	}
+	return true;
+	}
+	</script>
+	</head>
+	<body>
+		<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method= "post">
+			Enter username:  <input type="text" name="fname"><br>
+			Enter password: <input type="password" name="psw1"><br>
+			confirm:  <input type="password" name="psw2"><br>
+			<input type="button" value="submit" onclick="validateForm()">
+		</form>
+	</body>
+</html>

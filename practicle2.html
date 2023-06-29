@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Eligibility form</title></head>
+	<script language="javascript" type = "text/javaScript">
+		function calEvaluate () {
+		if (form.name.value == ""){
+			alert("Enter your name");
+
+		}else if (form.age.value == ""){
+			alert("enter your age");
+		}else if(form.address.value==""){
+			alert("Enter your Age");
+		}else if(form.maritial.checked == false){
+			alert("please input maritial deta");
+		}else if(form.child.checked == false){
+			alert("please input child deta");
+		}
+
+		if((form.maritial.checked == true) &&(form.child.checked ==true)){
+			nchild = prompt("number of child:");
+			if(nchild==0){
+				alert("request not accept");}
+			else if(nchild<=2){
+				alert("Get rs.25000");}
+			else if(nchild>2){
+				alert("get Rs:50000");
+			}
+		}
+	}
+	</script>
+
+<body>
+	
+
+    <form name= "form" method = "post">
+<b>	Enter username:  <input type="text" name="name"><br><br>
+	Enter Address: <input type="Address" name="address"><br><br>
+	Age: <input type="Address" name="age"><br><br>
+	maritial stuts:(yes /no) <input type="checkbox" name="maritial"><br><br>
+	have you child:(yes/no)<input type="checkbox" name="child"><br><br></b>
+	
+	<input type="submit" name="btneveluale" value="Evaluale" onclick="return calEvaluate()">
+	</form>
+</body>
+</html>
